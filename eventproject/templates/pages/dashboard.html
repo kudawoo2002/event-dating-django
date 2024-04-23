@@ -1,0 +1,16 @@
+{% extends 'partial/base.html' %} {% load static%} {% block title%} Sign-In
+{%endblock title %}{% block content %}{% include 'partial/navbar.html'%}
+<main>
+  <link rel="stylesheet" href="{% static 'css/login.css'%}" />
+  <section class="form">
+    <div class="form-wrapper">
+      <div class="form-header">
+        <i class="fa-solid fa-right-to-bracket fa-3x"></i>
+        <h1 class="form-h1">Dasgboard</h1>
+        <p class="login-description">To access your Dashboard</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% endblock content %}

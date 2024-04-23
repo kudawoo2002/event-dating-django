@@ -61,6 +61,7 @@ body::-webkit-scrollbar-track {
 /* End of Scrollbar */
 
 /* Navbar */
+
 .header-main {
   display: flex;
   position: fixed;
@@ -74,8 +75,7 @@ body::-webkit-scrollbar-track {
   font-size: 2rem;
   z-index: 100;
   transition: all 0.3s;
-
-  /* background-color: red; */
+  /* background-color: #092627; */
 }
 
 .btn-mobile-nav {
