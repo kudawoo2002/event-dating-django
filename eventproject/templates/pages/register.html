@@ -1,0 +1,43 @@
+{% extends 'partial/base.html' %} {% load static%} {% block title %}Sign-In
+{%endblock title %}{% block content %} {% include 'partial/navbar.html' %}
+<main>
+  <link rel="stylesheet" href="{% static 'css/register.css'%}" />
+  <section class="register-form">
+    <div class="form-wrapper">
+      <div class="form-header">
+        <i class="fa-solid fa-user-plus fa-2x"></i>
+        <h1 class="form-h1">Sign up</h1>
+        <p class="login-description">To access your Dashboard</p>
+      </div>
+      <form class="form-main" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+          <input type="text" name="username" placeholder="e.g type username" />
+        </div>
+        <div class="form-group">
+          <input
+            type="password"
+            class=""
+            name="password"
+            placeholder="e.g type your password"
+          />
+        </div>
+        <div class="form-group-btn">
+          <button type="submit" class="btn-form">Login</button>
+        </div>
+        <div class="login-error">
+          {% for message in messages %}
+          <p>{{ message}}</p>
+          {% endfor %}
+        </div>
+        <div class="form-group-btn">
+          <p class="form-text">
+            If you don't user account kindly, <a href="">Register</a>
+          </p>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+{% endblock content %}

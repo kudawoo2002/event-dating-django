@@ -1,0 +1,168 @@
+.header-main {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 9.6rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10rem;
+  font-size: 2rem;
+  z-index: 100;
+  transition: all 0.3s;
+  /* background-color: #fff; */
+}
+
+.logo {
+  color: #092627;
+}
+
+.navbar-list {
+  display: flex;
+  gap: 4.8rem;
+  justify-content: center;
+  align-items: center;
+}
+.navbar-list-link {
+  color: #092627;
+}
+
+.dating {
+  margin-top: 10%;
+}
+
+.dating-wrapper {
+  width: 100%;
+  padding: 0 6rem;
+  margin-bottom: 9.6rem;
+}
+
+.dating-header i {
+  color: #e31b23;
+  font-size: 4rem;
+}
+
+.dating-h1 {
+  margin-bottom: 3rem;
+  font-size: 3rem;
+  color: #8430ea;
+  font-family: "Mooli", cursive;
+}
+
+.dating-description {
+  font-size: 1.8rem;
+  color: #5e728f;
+}
+
+.dating-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+.dating-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  margin-bottom: 15rem;
+}
+
+.dating-card {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 2rem;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.dating-card img {
+  width: 100%;
+  cursor: pointer;
+  border-radius: 2rem;
+  object-fit: cover;
+}
+
+.circle-green {
+  width: 2rem;
+  height: 2rem;
+  background-color: #43a553;
+  border-radius: 50%;
+  position: absolute;
+  top: 1.5rem;
+  left: 2rem;
+  -webkit-animation: glowing 1500ms infinite;
+  -moz-animation: glowing 1500ms infinite;
+  -o-animation: glowing 1500ms infinite;
+  animation: glowing 1500ms infinite;
+}
+
+@-webkit-keyframes glowing {
+  0% {
+    background-color: #43a553;
+    -webkit-box-shadow: 0 0 3px #43a553;
+  }
+  50% {
+    background-color: #317a3e;
+    -webkit-box-shadow: 0 0 40px #317a3e;
+  }
+  100% {
+    background-color: #43a553;
+    -webkit-box-shadow: 0 0 3px #43a553;
+  }
+}
+
+@-moz-keyframes glowing {
+  0% {
+    background-color: #43a553;
+    -moz-box-shadow: 0 0 3px #43a553;
+  }
+  50% {
+    background-color: #317a3e;
+    -moz-box-shadow: 0 0 40px #317a3e;
+  }
+  100% {
+    background-color: #43a553;
+    -moz-box-shadow: 0 0 3px #43a553;
+  }
+}
+
+@-o-keyframes glowing {
+  0% {
+    background-color: #43a553;
+    box-shadow: 0 0 3px #43a553;
+  }
+  50% {
+    background-color: #317a3e;
+    box-shadow: 0 0 40px #317a3e;
+  }
+  100% {
+    background-color: #43a553;
+    box-shadow: 0 0 3px #43a553;
+  }
+}
+
+@keyframes glowing {
+  0% {
+    background-color: #43a553;
+    box-shadow: 0 0 3px #43a553;
+  }
+  50% {
+    background-color: #317a3e;
+    box-shadow: 0 0 40px #317a3e;
+  }
+  100% {
+    background-color: #43a553;
+    box-shadow: 0 0 3px #43a553;
+  }
+}
+
+.dating-availability {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  color: #fff;
+}

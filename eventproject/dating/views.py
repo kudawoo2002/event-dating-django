@@ -7,6 +7,10 @@ from django.contrib.auth.decorators import login_required
 def home(request):
     return render(request,template_name="index.html")
 
+@login_required(login_url="login-view")
+def dating(request):
+    return render(request, template_name="pages/dating.html")
+
 
 def login_view(request):
     if request.method=="POST":
@@ -23,6 +27,9 @@ def login_view(request):
 
     return render(request, template_name="pages/login.html")
 
+
+def register(request):
+    return render(request,template_name="pages/register.html")
 
 @login_required(login_url="login-view")
 def dashboard(request):

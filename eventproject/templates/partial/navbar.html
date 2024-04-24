@@ -14,20 +14,26 @@
   <nav class="navbar">
     <ul class="navbar-list">
       <li><a class="navbar-list-link" href="{% url 'home' %}">Home</a></li>
-      <li><a class="navbar-list-link" href="">About</a></li>
-      <li><a class="navbar-list-link" href="">Events</a></li>
-      <li><a class="navbar-list-link" href="">Contact</a></li>
-
+      <li>
+        <a class="navbar-list-link" href="">Our community</a>
+      </li>
       {% if user.is_authenticated %}
+
       <li><a class="navbar-list-link" href="">Hello, {{request.user}}</a></li>
+      <li>
+        <a class="navbar-list-link" href="{% url 'dating' %}">Dating</a>
+      </li>
       <li>
         <a class="navbar-list-link" href="{% url 'logout-view'%}">Logout</a>
       </li>
       {% else %}
+      <li><a class="navbar-list-link" href="">Contact</a></li>
       <li>
         <a class="navbar-list-link" href="{% url 'login-view' %}">Login</a>
       </li>
-      <li><a class="navbar-list-link" href="">Sign Up</a></li>
+      <li>
+        <a class="navbar-list-link" href="{% url 'register' %}">Sign Up</a>
+      </li>
       {% endif %}
     </ul>
   </nav>
