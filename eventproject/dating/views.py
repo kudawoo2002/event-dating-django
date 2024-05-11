@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.forms import UserCreationForm
+from .forms import CreateUserForms 
 # Create your views here.
 
 def home(request):
@@ -29,7 +31,19 @@ def login_view(request):
 
 
 def register(request):
-    return render(request,template_name="pages/register.html")
+    form = CreateUserForms()
+    context ={'form': form}
+    if request.method == "POST":
+        form = CreateUserForms(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("login-view")
+        else:
+            messages.info(request, "invalid field or password does not the requirement")
+            return render(request,template_name="pages/register.html", context=context)
+        
+    
+    return render(request,template_name="pages/register.html", context=context)
 
 @login_required(login_url="login-view")
 def dashboard(request):

@@ -138,6 +138,14 @@
   color: #5e728f;
 }
 
+.form-main .forget-pass a {
+  font-size: 3rem;
+  text-align: center;
+  color: #b41616;
+  font-weight: 600;
+  margin: 3rem 0;
+}
+
 .login-error {
   font-size: 2rem;
   text-align: center;
